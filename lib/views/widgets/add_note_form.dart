@@ -33,16 +33,16 @@ class _AddNoteFormState extends State<AddNoteForm> {
         autovalidateMode: autovalidateMode,
         child: Column(
           children: [
-            const SizedBox(height: 18),
-            Container(
-              width: 60,
-              height: 3.5,
-              decoration: BoxDecoration(
-                color: Colors.grey.shade700,
-                borderRadius: BorderRadius.circular(50),
-              ),
-            ),
-            const SizedBox(height: 26),
+            // const SizedBox(height: 18),
+            // Container(
+            //   width: 60,
+            //   height: 3.5,
+            //   decoration: BoxDecoration(
+            //     color: Colors.grey.shade700,
+            //     borderRadius: BorderRadius.circular(50),
+            //   ),
+            // ),
+            // const SizedBox(height: 26),
             CustomTextFeild(
               hint: 'Title',
               onSaved: (value) {
@@ -72,13 +72,13 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       formKey.currentState!.save();
                       var currentDate = DateTime.now();
       
-                      var formatedCurrentDate = DateFormat(
-                        'MMMM d, yyyy',
-                      ).format(currentDate);
+                      // var formatedCurrentDate = DateFormat(
+                      //   'MMMM d, yyyy',
+                      // ).format(currentDate);
                       var noteModel = NoteModel(
                         title: title!,
                         subTitle: subTitle!,
-                        date: formatedCurrentDate,
+                        date: currentDate.toString(),
                         color: Colors.blueGrey.value,
                       );
                       BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);

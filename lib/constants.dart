@@ -36,8 +36,8 @@ const List<Color> kColors = [
   // Color(0xffC77DFF), // light purple
   // Color(0xffE0AAFF), // pale lilac accent ..
   // ================================================================================
-  Color(0xffE0AAFF), // pale lilac accent ..
   Color(0xffdabfff),
+  // Color(0xffE0AAFF),
   // Color(0xff907AD6),
   Color(0xffE8F1F2), // off-white text ..
   Color(0xffFFF1E6), // cream ..

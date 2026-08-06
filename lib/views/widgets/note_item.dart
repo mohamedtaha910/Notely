@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/edit_note_view.dart';
@@ -9,6 +10,7 @@ class NoteItem extends StatelessWidget {
   final NoteModel note;
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -80,7 +82,9 @@ class NoteItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 0),
               child: Text(
-                note.date,
+                DateFormat(
+                        'MMMM d, yyyy',
+                      ).format(DateTime.parse(note.date)),
                 style: TextStyle(color: Colors.black54, fontSize: 12),
               ),
             ),

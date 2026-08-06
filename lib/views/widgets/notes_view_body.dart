@@ -72,7 +72,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
   left: 0,
   child: IgnorePointer(
     child: Container(
-      height: 120,
+      height: 125,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
@@ -81,8 +81,8 @@ class _NotesViewBodyState extends State<NotesViewBody> {
           colors: [
             ThemeData.dark().scaffoldBackgroundColor.withAlpha(240),
             ThemeData.dark().scaffoldBackgroundColor.withAlpha(185),
-            ThemeData.dark().scaffoldBackgroundColor.withAlpha(130),
-            ThemeData.dark().scaffoldBackgroundColor.withAlpha(80),
+            ThemeData.dark().scaffoldBackgroundColor.withAlpha(135),
+            ThemeData.dark().scaffoldBackgroundColor.withAlpha(85),
             ThemeData.dark().scaffoldBackgroundColor.withAlpha(40),
             ThemeData.dark().scaffoldBackgroundColor.withAlpha(15),
             ThemeData.dark().scaffoldBackgroundColor.withAlpha(0),

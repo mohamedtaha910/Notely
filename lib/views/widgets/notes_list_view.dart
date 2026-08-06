@@ -26,9 +26,7 @@ class NotesListView extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.45,
-                        ),
+                       
                         Text(
                           'No Notes Yet',
                           style: TextStyle(

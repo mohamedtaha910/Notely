@@ -45,7 +45,8 @@ class NotesView extends StatelessWidget {
                   showModalBottomSheet(
                     isScrollControlled: true,
                     enableDrag: true,
-                    // showDragHandle: true,
+                    showDragHandle: true,
+                    
                     // backgroundColor: const Color.fromARGB(255, 19, 18, 18),
                     // barrierLabel: '',
                     // barrierColor: Colors.black.withAlpha(220),
