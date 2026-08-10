@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/views/search_page.dart';
 
 import '../../cubits/notes_cubit/notes_cubit.dart';
 import 'custom_app_bar.dart';
@@ -58,7 +59,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 18),
+      padding: EdgeInsets.symmetric(horizontal: 12),
       child: SafeArea(
         top: false,
         child: Stack(
@@ -98,7 +99,9 @@ class _NotesViewBodyState extends State<NotesViewBody> {
               left: 0,
               child: Padding(
                 padding: const EdgeInsets.only(top :36.0),
-                child: CustomAppBar(title: 'Notes', icon: CupertinoIcons.search),
+                child: CustomAppBar(title: 'Notes', icon: CupertinoIcons.search , onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: ((context) => SearchPage())  ));
+                },),
               )),
             // NoteItem()
           ],

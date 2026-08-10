@@ -10,7 +10,8 @@ part 'notes_state.dart';
 class NotesCubit extends Cubit<NotesState> {
   NotesCubit() : super(NotesInitial());
 
-  List<NoteModel>? notes;
+  List<NoteModel>? notes=[];
+  List<NoteModel>? searchedNotes=[];
   void fetchAllNotes() {
     var notesBox = Hive.box<NoteModel>(kNotesBox);
     
@@ -21,6 +22,21 @@ class NotesCubit extends Cubit<NotesState> {
 
     emit(NotesSuccess());
   }
+  void searchNotes(String query) {
+    
+    if (query.trim().isEmpty) {
+      searchedNotes = [];
+    } else {
+      final searchQuery = query.toLowerCase().trim();
+
+      searchedNotes = notes!.where((note) {
+        return note.title.toLowerCase().contains(searchQuery) ||
+            note.subTitle.toLowerCase().contains(searchQuery);
+      }).toList();
+    }
+        emit((NotesSuccess() ));
+
+}
 }
 void orderNotesByDate(List<NoteModel> notes) {
   notes.sort((a, b) => DateTime.parse(b.date).compareTo(DateTime.parse(a.date)));
