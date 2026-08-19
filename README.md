@@ -123,11 +123,7 @@ dart run build_runner build --delete-conflicting-outputs
 * [ ] Note categories
 * [ ] Favorite notes
 * [ ] Pin important notes
-* [ ] Note colors
-* [ ] Sort notes by date
-* [ ] Archive notes
 * [ ] Cloud synchronization
-* [ ] Firebase authentication
 * [ ] Backup and restore
 
 ## 👨‍💻 Author
