@@ -3,8 +3,6 @@ import 'package:notes_app/views/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/views/widgets/notes_view_body.dart';
 import 'dart:ui';
 
-
-
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
@@ -12,7 +10,6 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: NotesViewBody(),
-
       floatingActionButton: ClipRRect(
         borderRadius: BorderRadiusGeometry.circular(100),
         child: BackdropFilter(
@@ -40,13 +37,12 @@ class NotesView extends StatelessWidget {
             child: Center(
               child: IconButton(
                 padding: EdgeInsets.all(0),
-
                 onPressed: () {
                   showModalBottomSheet(
                     isScrollControlled: true,
                     enableDrag: true,
                     showDragHandle: true,
-                    
+
                     // backgroundColor: const Color.fromARGB(255, 19, 18, 18),
                     // barrierLabel: '',
                     // barrierColor: Colors.black.withAlpha(220),
@@ -71,7 +67,6 @@ class NotesView extends StatelessWidget {
           ),
         ),
       ),
-      
     );
   }
 }

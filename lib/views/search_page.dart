@@ -97,12 +97,43 @@ class SearchPage extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Icon(
-                        Icons.chevron_left_rounded,
-                        size: 36,
-                        color: Colors.white54,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: BackdropFilter(
+                          filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                          child: Container(
+                            padding: EdgeInsets.all(4.7),
+                            decoration: BoxDecoration(
+                              // color: Colors.white70.withAlpha(25),
+                              // borderRadius: BorderRadius.circular(16),
+                              shape: BoxShape.circle,
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.white.withAlpha(70),
+                                  Colors.white.withAlpha(40),
+                                  Colors.white.withAlpha(20),
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                              ),
+                              border: Border(
+                                top: BorderSide(
+                                    color: Colors.grey.withAlpha(150),
+                                    width: 0.9),
+                              ),
+                            ),
+                            child: Icon(
+                              Icons.chevron_left_rounded,
+                              size: 36,
+                              color: Colors.white54,
+                            ),
+                          ),
+                        ),
                       )),
                   // Text('Search Page'),
+                  SizedBox(
+                    width: 16,
+                  ),
                   Expanded(
                     child: SearchTextFeild(
                       onChanged: (value) {

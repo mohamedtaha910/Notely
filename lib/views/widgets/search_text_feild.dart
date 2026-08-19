@@ -13,48 +13,60 @@ class SearchTextFeild extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(100),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: TextField(
-          cursorColor: kPrimaryColor,
-          // con
-          autofocus: true,
-          onChanged: onChanged,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-            filled: true,
-            fillColor: Colors.white.withAlpha(20),
-            prefixIcon: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14.0),
-              child: SvgPicture.asset(
-                'assets/icons/Search.svg',
-                height: 24,
-                color: Colors.white38,
-              ),
+        filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+        child: Container(
+          decoration: BoxDecoration(
+            // color: Colors.white70.withAlpha(25),
+            borderRadius: BorderRadius.circular(100),
+            // shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: [
+                Colors.white.withAlpha(60),
+                Colors.white.withAlpha(35),
+                Colors.white.withAlpha(25),
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
-            prefixIconConstraints: BoxConstraints(
-              minHeight: 1,
-              minWidth: 1,
+            border: Border(
+              top: BorderSide(color: Colors.grey.withAlpha(150), width: 1.1),
+              // bottom: BorderSide(color: Colors.grey.withAlpha(100), width: 0.6),
             ),
-            hint: Text(
-              'Search Notes',
-              style: TextStyle(
-                color: Colors.white38,
-                fontSize: 14,
+          ),
+          child: TextField(
+            cursorColor: kPrimaryColor,
+            // con
+            autofocus: true,
+            onChanged: onChanged,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+              // filled: true,
+              // fillColor: Colors.white.withAlpha(20),
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                child: SvgPicture.asset(
+                  'assets/icons/Search.svg',
+                  height: 24,
+                  color: Colors.white38,
+                ),
               ),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey.shade100.withAlpha(100),
-                width: 0.5,
+              prefixIconConstraints: BoxConstraints(
+                minHeight: 1,
+                minWidth: 1,
               ),
-              borderRadius: BorderRadius.circular(100),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey.shade100.withAlpha(100),
-                width: 1.2,
+              hint: Text(
+                'Search Notes',
+                style: TextStyle(
+                  color: Colors.white38,
+                  fontSize: 14,
+                ),
               ),
-              borderRadius: BorderRadius.circular(100),
+              enabledBorder: OutlineInputBorder(borderSide: BorderSide.none
+                  // borderRadius: BorderRadius.circular(100),
+                  ),
+              focusedBorder: OutlineInputBorder(borderSide: BorderSide.none
+                  // borderRadius: BorderRadius.circular(100),
+                  ),
             ),
           ),
         ),
