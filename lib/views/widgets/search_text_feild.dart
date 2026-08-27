@@ -21,9 +21,9 @@ class SearchTextFeild extends StatelessWidget {
             // shape: BoxShape.circle,
             gradient: LinearGradient(
               colors: [
-                Colors.white.withAlpha(60),
+                Colors.white.withAlpha(45),
                 Colors.white.withAlpha(35),
-                Colors.white.withAlpha(25),
+                Colors.white.withAlpha(20),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

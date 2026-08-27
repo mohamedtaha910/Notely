@@ -69,19 +69,31 @@ class _NotesViewBodyState extends State<NotesViewBody> {
             left: 0,
             child: IgnorePointer(
               child: Container(
-                height: 125,
+                height: 115,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    stops: const [0.0, 0.3, 0.5, 0.65, 0.78, 0.88, 1.0],
+                    stops: const [
+                      0.0,
+                      0.3,
+                      0.5,
+                      0.65,
+                      0.78,
+                      0.82,
+                      0.88,
+                      0.92,
+                      1.0
+                    ],
                     colors: [
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(240),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(185),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(135),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(85),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(90),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(50),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(40),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(15),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(20),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(10),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(0),
                     ],
                   ),
