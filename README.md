@@ -101,6 +101,12 @@ dart run build_runner build --delete-conflicting-outputs
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![Home](assets/screenshots/home.jpg)                   | ![Add](assets/screenshots/add.jpg)                        |
 
+
+| Show Note                                              | Show Note                                                 |
+| ------------------------------------------------------ | --------------------------------------------------------- |
+| ![Show Note ](assets/screenshots/stickey.jpg)          | ![Show Note  ](assets/screenshots/stickey2.jpg)           |
+
+
 | Edit note                                              | Delete                                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![Edit](assets/screenshots/edit.jpg)                   | ![Delete](assets/screenshots/delete_confirm.jpg)          |
@@ -112,6 +118,7 @@ dart run build_runner build --delete-conflicting-outputs
 | Search Not Found                                       | Home 2                                                    |
 | ------------------------------------------------------ | --------------------------------------------------------- |
 | ![Search](assets/screenshots/not_found.jpg)            | ![Home ](assets/screenshots/home2.jpg)                    |
+
 
 
 ---
