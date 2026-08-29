@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/views/widgets/custom_app_bar.dart';
@@ -34,7 +32,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              SizedBox(height: 55),
+              SizedBox(height: 10),
               CustomAppBar(
                 onPressed: () {
                   widget.note.title = title ?? widget.note.title;
@@ -62,9 +60,9 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
                 height: 12,
               ),
               SizedBox(height: 32),
-      
+
               EditNoteColorsList(note: widget.note),
-      
+
               // Expanded(
               //   child: TextField(
               //     maxLines: null,

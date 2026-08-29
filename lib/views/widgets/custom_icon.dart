@@ -11,7 +11,7 @@ class CustomIcon extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: BackdropFilter(
-        filter:  ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
+        filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
         child: Container(
           height: 46,
           width: 46,

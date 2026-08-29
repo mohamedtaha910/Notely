@@ -2,13 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/constants.dart';
+// import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/center_text.dart';
 import 'package:notes_app/views/widgets/note_item.dart';
 import 'package:notes_app/views/widgets/search_text_feild.dart';
-import 'package:svg_flutter/svg.dart';
+// import 'package:svg_flutter/svg.dart';
 
 class SearchPage extends StatelessWidget {
   SearchPage({super.key});

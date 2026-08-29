@@ -208,8 +208,10 @@ class NoteItem extends StatelessWidget {
       context: context,
       builder: (context) {
         return BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+          filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
           child: AlertDialog(
+            shadowColor: Colors.white.withAlpha(50),
+            // shadowColor: color,
             scrollable: true,
             surfaceTintColor: color,
             backgroundColor: color,
@@ -230,43 +232,29 @@ class NoteItem extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            // color: Colors.white10,
-                            gradient: LinearGradient(
-                              colors: [
-                                // Colors.blue.withAlpha(200),
-                                // Colors.blue.withAlpha(150),
-                                // Colors.blue.withAlpha(120),
-
-                                kPrimaryColor.withAlpha(200),
-                                kPrimaryColor.withAlpha(150),
-                              ],
-                              begin: AlignmentGeometry.topCenter,
-                              end: AlignmentGeometry.bottomCenter,
-                            ),
-                            // border: Border(
-                            //   top: BorderSide(
-                            //     color: Colors.white.withAlpha(200),
-                            //     width: 5.8,
-                            //   ),
-                            // ),
-
-                            border: Border.all(
-                              color: Colors.white.withAlpha(100),
-                              width: 2,
-                            )),
-                        child: Image.asset(
-                          'assets/icons/sticky-note.png',
-                          height: 45,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        // color: kPrimaryColor,
+                        gradient: LinearGradient(
+                          colors: [
+                            // kPrimaryColor.withAlpha(200),
+                            // kPrimaryColor.withAlpha(180),
+                            Colors.deepOrange.withAlpha(200),
+                            Colors.deepOrangeAccent.withAlpha(200),
+                            Colors.orange.withAlpha(200),
+                          ],
+                          begin: AlignmentGeometry.topCenter,
+                          end: AlignmentGeometry.bottomCenter,
                         ),
-                      ),
+                        border: Border.all(
+                          color: Colors.white.withAlpha(120),
+                          width: 2.2,
+                        )),
+                    child: Image.asset(
+                      'assets/icons/sticky-note.png',
+                      height: 45,
                     ),
                   ),
                   SizedBox(height: 24),

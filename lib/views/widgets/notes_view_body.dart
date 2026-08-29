@@ -108,7 +108,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
               child: Padding(
                 padding: const EdgeInsets.only(top: 36.0),
                 child: CustomAppBar(
-                  title: 'Notes',
+                  title: 'Notely',
                   icon: CupertinoIcons.search,
                   onPressed: () {
                     Navigator.push(
