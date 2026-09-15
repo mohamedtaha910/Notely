@@ -9,7 +9,7 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NotesViewBody(),
+      body: SafeArea(top: false, bottom: false, child: NotesViewBody()),
       floatingActionButton: ClipRRect(
         borderRadius: BorderRadiusGeometry.circular(100),
         child: BackdropFilter(

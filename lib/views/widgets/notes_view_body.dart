@@ -69,7 +69,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
             left: 0,
             child: IgnorePointer(
               child: Container(
-                height: 115,
+                height: 145,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -86,15 +86,16 @@ class _NotesViewBodyState extends State<NotesViewBody> {
                       1.0
                     ],
                     colors: [
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(240),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(185),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(135),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(90),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(50),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(255),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(210),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(150),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(100),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(40),
+                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(30),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(20),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(10),
                       ThemeData.dark().scaffoldBackgroundColor.withAlpha(0),
+                      // Colors.red
                     ],
                   ),
                 ),
@@ -102,21 +103,16 @@ class _NotesViewBodyState extends State<NotesViewBody> {
             ),
           ),
           Positioned(
-              top: 0,
+              top: 36,
               right: 0,
               left: 0,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 36.0),
-                child: CustomAppBar(
-                  title: 'Notely',
-                  icon: CupertinoIcons.search,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: ((context) => SearchPage())));
-                  },
-                ),
+              child: CustomAppBar(
+                title: 'Notely',
+                icon: CupertinoIcons.search,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => SearchPage())));
+                },
               )),
           // NoteItem()
         ],

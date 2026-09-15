@@ -10,9 +10,16 @@ import 'package:notes_app/views/widgets/note_item.dart';
 import 'package:notes_app/views/widgets/search_text_feild.dart';
 // import 'package:svg_flutter/svg.dart';
 
-class SearchPage extends StatelessWidget {
-  SearchPage({super.key});
+class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
+
+  @override
+  State<SearchPage> createState() => _SearchPageState();
+}
+
+class _SearchPageState extends State<SearchPage> {
   String query = '';
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

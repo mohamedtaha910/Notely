@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/widgets/container.dart';
+// import 'package:flutter/src/widgets/framework.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomTextFeild extends StatelessWidget {
@@ -19,6 +19,7 @@ class CustomTextFeild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: kPrimaryColor,
       onChanged: onChanged,
       validator: (value) {
         if (value?.isEmpty ?? true) {
@@ -27,7 +28,6 @@ class CustomTextFeild extends StatelessWidget {
           return null;
         }
       },
-
       maxLines: height.toInt(),
       onSaved: onSaved,
       decoration: InputDecoration(
@@ -51,7 +51,8 @@ class CustomTextFeild extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: kPrimaryColor, width: 0.9),
+          borderSide:
+              BorderSide(color: kPrimaryColor.withAlpha(200), width: 1.1),
         ),
       ),
     );
