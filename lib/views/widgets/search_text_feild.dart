@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:notes_app/constants.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -43,13 +44,11 @@ class SearchTextFeild extends StatelessWidget {
               // filled: true,
               // fillColor: Colors.white.withAlpha(20),
               prefixIcon: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14.0),
-                child: SvgPicture.asset(
-                  'assets/icons/Search.svg',
-                  height: 24,
-                  color: Colors.white38,
-                ),
-              ),
+                  padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                  child: Icon(
+                    Iconsax.search_normal,
+                    color: Colors.white38,
+                  )),
               prefixIconConstraints: BoxConstraints(
                 minHeight: 1,
                 minWidth: 1,

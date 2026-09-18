@@ -1,11 +1,13 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/views/search_page.dart';
+import 'package:notes_app/views/widgets/custom_shadow.dart';
 
 import '../../cubits/notes_cubit/notes_cubit.dart';
 import 'custom_app_bar.dart';
 import 'notes_list_view.dart';
+import 'package:iconsax/iconsax.dart';
 
 // class NotesViewBody extends StatefulWidget {
 //   const NotesViewBody({super.key});
@@ -63,52 +65,14 @@ class _NotesViewBodyState extends State<NotesViewBody> {
       child: Stack(
         children: [
           NotesListView(),
-          Positioned(
-            top: 0,
-            right: 0,
-            left: 0,
-            child: IgnorePointer(
-              child: Container(
-                height: 145,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    stops: const [
-                      0.0,
-                      0.3,
-                      0.5,
-                      0.65,
-                      0.78,
-                      0.82,
-                      0.88,
-                      0.92,
-                      1.0
-                    ],
-                    colors: [
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(255),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(210),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(150),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(100),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(40),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(30),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(20),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(10),
-                      ThemeData.dark().scaffoldBackgroundColor.withAlpha(0),
-                      // Colors.red
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
+          CustomShadow(),
           Positioned(
               top: 36,
               right: 0,
               left: 0,
               child: CustomAppBar(
                 title: 'Notely',
-                icon: CupertinoIcons.search,
+                icon: Iconsax.search_normal,
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: ((context) => SearchPage())));

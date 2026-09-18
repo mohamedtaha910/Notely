@@ -1,6 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
+
+final markdownStyle = MarkdownStyleSheet(
+  
+  p: TextStyle(color: Colors.grey.shade800, fontSize: 13, height: 1.8 , ),
+  strong: TextStyle(color: Colors.red.shade800, fontSize: 14, height: 1.8),
+  h1: TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+  ),
+  h2: TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  ),
+  h3: TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+  ),
+  h4: TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  ),
+  h5: TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 10,
+    fontWeight: FontWeight.bold,
+  ),
+  h6: TextStyle(
+    color: Colors.grey.shade800,
+    fontSize: 8,
+    fontWeight: FontWeight.bold,
+  ),
+  listBullet: TextStyle(color: Colors.grey.shade800, fontSize: 14),
+  blockquote: TextStyle(
+    color: Colors.grey.shade800,
+    fontStyle: FontStyle.italic,
+  ),
+  code: TextStyle(
+    color: Colors.grey.shade800,
+    fontFamily: 'monospace',
+  ),
+);
 
 const Color kPrimaryColor = Color.fromARGB(255, 249, 95, 48);
+const Color kBackGroundColor = Color(0xff0D1117);
+// const Color kBackGroundColor = Colors.black;
+// const Color kBackGroundColor = Color(0xff08100C);
+
 const kNotesBox = 'notes_box';
 const List<Color> kColors = [
   // Color(0xffdabfff),

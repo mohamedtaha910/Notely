@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
@@ -47,7 +48,9 @@ class NoteItem extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              subtitle: Padding(
+              subtitle:
+                  // MarkdownBody(data: note.subTitle, styleSheet: markdownStyle),
+                  Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 0),
                 child: Text(
                   maxLines: 1,
@@ -104,7 +107,15 @@ class NoteItem extends StatelessWidget {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: kBackGroundColor,
           contentPadding: EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(22),
+            side: BorderSide(
+              color: Colors.white.withAlpha(110),
+              width: 0.8,
+            ),
+          ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -261,12 +272,14 @@ class NoteItem extends StatelessWidget {
                   Text(
                     noteModel.title,
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 18),
+                  // MarkdownBody(
+                  //     data: noteModel.subTitle, styleSheet: markdownStyle)
                   Text(
                     noteModel.subTitle,
                     style: TextStyle(

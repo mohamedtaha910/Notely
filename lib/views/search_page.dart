@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/widgets/center_text.dart';
+import 'package:notes_app/views/widgets/custom_shadow.dart';
 import 'package:notes_app/views/widgets/note_item.dart';
 import 'package:notes_app/views/widgets/search_text_feild.dart';
 // import 'package:svg_flutter/svg.dart';
@@ -68,32 +69,7 @@ class _SearchPageState extends State<SearchPage> {
                 }
               },
             ),
-            Positioned(
-              top: 0,
-              right: 0,
-              left: 0,
-              child: IgnorePointer(
-                child: Container(
-                  height: 155,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      stops: const [0.0, 0.3, 0.5, 0.65, 0.78, 0.88, 1.0],
-                      colors: [
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(240),
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(185),
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(135),
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(85),
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(40),
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(15),
-                        ThemeData.dark().scaffoldBackgroundColor.withAlpha(0),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            CustomShadow(),
             Positioned(
               top: 36,
               right: 12,

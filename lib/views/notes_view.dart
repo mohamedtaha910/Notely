@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/views/widgets/notes_view_body.dart';
 import 'dart:ui';
+import 'package:iconsax/iconsax.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -13,7 +14,7 @@ class NotesView extends StatelessWidget {
       floatingActionButton: ClipRRect(
         borderRadius: BorderRadiusGeometry.circular(100),
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
+          filter: ImageFilter.blur(sigmaX: 20.0, sigmaY: 20.0),
           child: Container(
             height: 58,
             width: 58,
@@ -23,9 +24,9 @@ class NotesView extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: LinearGradient(
                 colors: [
-                  Colors.white.withAlpha(70),
-                  Colors.white.withAlpha(40),
-                  Colors.white.withAlpha(20),
+                  Colors.grey.withAlpha(100),
+                  Colors.grey.withAlpha(60),
+                  Colors.grey.withAlpha(40),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -58,8 +59,8 @@ class NotesView extends StatelessWidget {
                   );
                 },
                 icon: Icon(
-                  Icons.edit_note_rounded,
-                  size: 36,
+                  Iconsax.edit,
+                  size: 30,
                   color: Colors.white,
                 ),
               ),
