@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:notes_app/constants.dart';
-import 'package:svg_flutter/svg.dart';
+// import 'package:svg_flutter/svg.dart';
 
 class SearchTextFeild extends StatelessWidget {
   const SearchTextFeild({super.key, required this.onChanged});
@@ -22,16 +22,16 @@ class SearchTextFeild extends StatelessWidget {
             // shape: BoxShape.circle,
             gradient: LinearGradient(
               colors: [
-                Colors.white.withAlpha(45),
-                Colors.white.withAlpha(35),
+                Colors.white.withAlpha(40),
+                Colors.white.withAlpha(30),
                 Colors.white.withAlpha(20),
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
             ),
             border: Border(
-              top: BorderSide(color: Colors.grey.withAlpha(150), width: 1.1),
-              // bottom: BorderSide(color: Colors.grey.withAlpha(100), width: 0.6),
+              top: BorderSide(color: Colors.grey.withAlpha(50), width: 1.4),
+              bottom: BorderSide(color: Colors.grey.withAlpha(50), width: 0.8),
             ),
           ),
           child: TextField(
@@ -44,28 +44,22 @@ class SearchTextFeild extends StatelessWidget {
               // filled: true,
               // fillColor: Colors.white.withAlpha(20),
               prefixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 14.0),
-                  child: Icon(
-                    Iconsax.search_normal,
-                    color: Colors.white38,
-                  )),
-              prefixIconConstraints: BoxConstraints(
-                minHeight: 1,
-                minWidth: 1,
+                padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                child: Icon(Iconsax.search_normal, color: Colors.white38),
               ),
+              prefixIconConstraints: BoxConstraints(minHeight: 1, minWidth: 1),
               hint: Text(
                 'Search Notes',
-                style: TextStyle(
-                  color: Colors.white38,
-                  fontSize: 14,
-                ),
+                style: TextStyle(color: Colors.white38, fontSize: 14),
               ),
-              enabledBorder: OutlineInputBorder(borderSide: BorderSide.none
-                  // borderRadius: BorderRadius.circular(100),
-                  ),
-              focusedBorder: OutlineInputBorder(borderSide: BorderSide.none
-                  // borderRadius: BorderRadius.circular(100),
-                  ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                // borderRadius: BorderRadius.circular(100),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                // borderRadius: BorderRadius.circular(100),
+              ),
             ),
           ),
         ),

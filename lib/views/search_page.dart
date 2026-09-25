@@ -32,13 +32,12 @@ class _SearchPageState extends State<SearchPage> {
           children: [
             BlocBuilder<NotesCubit, NotesState>(
               builder: (context, state) {
-                List<NoteModel> searchedNotes =
-                    BlocProvider.of<NotesCubit>(context).searchedNotes!;
+                List<NoteModel> searchedNotes = BlocProvider.of<NotesCubit>(
+                  context,
+                ).searchedNotes!;
                 if (state is NotesSuccess) {
                   if (query == '') {
-                    return CenterText(
-                      text: 'Search your Notes.',
-                    );
+                    return CenterText(text: 'Search your Notes.');
                   } else if (searchedNotes.isEmpty) {
                     return CenterText(text: 'No Notes Found.');
                   } else {
@@ -48,17 +47,16 @@ class _SearchPageState extends State<SearchPage> {
                         physics: BouncingScrollPhysics(),
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: 75,
-                            ),
+                            SizedBox(height: 75),
                             ListView.builder(
-                                physics: NeverScrollableScrollPhysics(),
-                                shrinkWrap: true,
-                                itemCount: searchedNotes.length,
-                                itemBuilder: ((context, index) {
-                                  NoteModel note = searchedNotes[index];
-                                  return NoteItem(note: note);
-                                })),
+                              physics: NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemCount: searchedNotes.length,
+                              itemBuilder: ((context, index) {
+                                NoteModel note = searchedNotes[index];
+                                return NoteItem(note: note);
+                              }),
+                            ),
                           ],
                         ),
                       ),
@@ -77,46 +75,46 @@ class _SearchPageState extends State<SearchPage> {
               child: Row(
                 children: [
                   GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(100),
-                        child: BackdropFilter(
-                          filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                          child: Container(
-                            padding: EdgeInsets.all(4.7),
-                            decoration: BoxDecoration(
-                              // color: Colors.white70.withAlpha(25),
-                              // borderRadius: BorderRadius.circular(16),
-                              shape: BoxShape.circle,
-                              gradient: LinearGradient(
-                                colors: [
-                                  Colors.white.withAlpha(70),
-                                  Colors.white.withAlpha(40),
-                                  Colors.white.withAlpha(20),
-                                ],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                              ),
-                              border: Border(
-                                top: BorderSide(
-                                    color: Colors.grey.withAlpha(150),
-                                    width: 0.9),
-                              ),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(100),
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                        child: Container(
+                          padding: EdgeInsets.all(4.8),
+                          decoration: BoxDecoration(
+                            // color: Colors.white70.withAlpha(25),
+                            // borderRadius: BorderRadius.circular(16),
+                            shape: BoxShape.circle,
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.white.withAlpha(60),
+                                Colors.white.withAlpha(40),
+                                Colors.white.withAlpha(20),
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
                             ),
-                            child: Icon(
-                              Icons.chevron_left_rounded,
-                              size: 36,
-                              color: Colors.white54,
+                            border: Border(
+                              top: BorderSide(
+                                color: Colors.grey.withAlpha(100),
+                                width: 1.2,
+                              ),
                             ),
                           ),
+                          child: Icon(
+                            Icons.chevron_left_rounded,
+                            size: 36,
+                            color: Colors.white54,
+                          ),
                         ),
-                      )),
-                  // Text('Search Page'),
-                  SizedBox(
-                    width: 16,
+                      ),
+                    ),
                   ),
+                  // Text('Search Page'),
+                  SizedBox(width: 12),
                   Expanded(
                     child: SearchTextFeild(
                       onChanged: (value) {
@@ -124,7 +122,7 @@ class _SearchPageState extends State<SearchPage> {
                         BlocProvider.of<NotesCubit>(context).searchNotes(query);
                       },
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

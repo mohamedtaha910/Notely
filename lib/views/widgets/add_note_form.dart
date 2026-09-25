@@ -33,16 +33,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
         autovalidateMode: autovalidateMode,
         child: Column(
           children: [
-            // const SizedBox(height: 18),
-            // Container(
-            //   width: 60,
-            //   height: 3.5,
-            //   decoration: BoxDecoration(
-            //     color: Colors.grey.shade700,
-            //     borderRadius: BorderRadius.circular(50),
-            //   ),
-            // ),
-            // const SizedBox(height: 26),
+             
             CustomTextFeild(
               hint: 'Title',
               onSaved: (value) {
@@ -82,6 +73,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                         color: Colors.blueGrey.value,
                       );
                       BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
+                      
                     } else {
                       autovalidateMode = AutovalidateMode.always;
                       setState(() {});

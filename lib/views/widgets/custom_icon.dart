@@ -9,7 +9,7 @@ class CustomIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(18),
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
         child: Container(
@@ -17,7 +17,7 @@ class CustomIcon extends StatelessWidget {
           width: 46,
           decoration: BoxDecoration(
             // color: Colors.white70.withAlpha(25),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(18),
             gradient: LinearGradient(
               colors: [
                 Colors.white.withAlpha(70),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:notes_app/services/notification_services.dart';
 import 'constants.dart';
 import 'cubits/notes_cubit/notes_cubit.dart';
 import 'models/note_model.dart';
@@ -9,6 +10,8 @@ import 'views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
+    await NotificationService.init();
+
 
   Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(NoteModelAdapter());
