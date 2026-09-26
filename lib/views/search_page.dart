@@ -100,8 +100,12 @@ class _SearchPageState extends State<SearchPage> {
                             border: Border(
                               top: BorderSide(
                                 color: Colors.grey.withAlpha(100),
-                                width: 1.2,
+                                width: 1.0,
                               ),
+                              // bottom: BorderSide(
+                              //   color: Colors.grey.withAlpha(150),
+                              //   width: 0.8,
+                              // ),
                             ),
                           ),
                           child: Icon(

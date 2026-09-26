@@ -32,7 +32,7 @@ class NotificationService {
     const details = NotificationDetails(android: androidDetails);
 
     await _notifications.show(
-      id: DateTime.now().millisecondsSinceEpoch,
+      id: DateTime.now().millisecondsSinceEpoch ~/ 1000,
       title: 'Note Added ',
       body: 'Your note "$title" was added successfully.',
       notificationDetails: details,
